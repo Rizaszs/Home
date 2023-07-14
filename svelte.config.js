@@ -1,3 +1,4 @@
+import { vitePreprocess } from "@sveltejs/kit/vite";
 import adapter from "@sveltejs/adapter-static";
 
 /** @type {import('@sveltejs/kit').Config} */
@@ -8,6 +9,8 @@ const config = {
       base: process.env.NODE_ENV === "production" ? "/sveltekit-gh-pages" : "",
     },
   },
+
+  preprocess: [vitePreprocess({})],
 };
 
 export default config;
