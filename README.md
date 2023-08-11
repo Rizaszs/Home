@@ -38,7 +38,7 @@ Ensure your top-level `+layout.js` exports `prerender = true`.
 
 ```js
 // src/routes/+layout.js
-export const prerender = true;
+export const prerender = true
 ```
 
 ## 2) Modify `paths.base` in the config
@@ -66,7 +66,7 @@ export default config;
 
 ```svelte
 <script>
-  import { base } from "$app/paths";
+	import { base } from '$app/paths'
 </script>
 
 <a href="{base}/about">About</a>
@@ -80,11 +80,11 @@ The last step is to add a `.nojekyll` file to the build folder to [bypass Jekyll
 
 ```json
 {
-  "scripts": {
-    "dev": "vite dev",
-    "build": "vite build",
-    "deploy": "touch build/.nojekyll && gh-pages -d build -t true"
-  }
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"deploy": "touch build/.nojekyll && gh-pages -d build -t true"
+	}
 }
 ```
 

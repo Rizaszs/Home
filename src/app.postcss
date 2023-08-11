@@ -2,3 +2,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html,
+body {
+	@apply bg-black;
+}
+
+.layout {
+	@apply mx-auto grid min-h-screen grid-rows-[auto,1fr,auto] bg-black lg:max-w-[1440px];
+}
+
+.fuck {
+	@apply flex flex-col lg:flex-row;
+}
