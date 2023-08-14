@@ -1,4 +1,0 @@
-import{s as l,n as i}from"../chunks/scheduler.e108d1fd.js";import{S as o,i as m,g as r,h as c,x as p,a as u,f as d}from"../chunks/index.5ae4157e.js";import"../chunks/paths.38ba5e8c.js";function f(s){let e,a=`<h1 class="text-5xl mb-2 font-bold text-fuchsia-600">Welcome to my fucking web</h1> <p class="text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam amet illum
-    repudiandae deleniti sint eum nulla distinctio, pariatur, facere aliquam
-    nisi rem veniam, velit molestiae praesentium beatae sapiente esse
-    dignissimos!</p>`;return{c(){e=r("div"),e.innerHTML=a},l(t){e=c(t,"DIV",{"data-svelte-h":!0}),p(e)!=="svelte-1qp3phm"&&(e.innerHTML=a)},m(t,n){u(t,e,n)},p:i,i,o:i,d(t){t&&d(e)}}}class v extends o{constructor(e){super(),m(this,e,null,f,l,{})}}export{v as component};
