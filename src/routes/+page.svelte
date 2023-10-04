@@ -6,7 +6,7 @@
 <section class=" flex h-fit w-full items-center justify-between py-28">
 	<div class="text-white">
 		<h1 class=" mb-2 text-6xl font-bold">
-			Hi, I'm <span class=" text-blue-700">Wick</span>
+			Hi, I'm <span class=" text-blue-700">Suryawan</span>
 		</h1>
 
 		<div class="flex">
@@ -18,7 +18,7 @@
 					With experience 3 years as programmer in the world, i buld app with many technology like
 					nextjs,flutter,react native and electron.
 				</p>
-				<a href="#" class=" mt-3 flex items-center text-lg text-yellow-500">
+				<a id="blank" href="#blank" class=" mt-3 flex items-center text-lg text-yellow-500">
 					<p class=" mr-3 capitalize">Let's collaborate</p>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
