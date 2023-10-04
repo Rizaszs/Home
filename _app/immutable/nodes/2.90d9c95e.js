@@ -1,0 +1,5 @@
+import{s as r,n as s}from"../chunks/scheduler.e108d1fd.js";import{S as n,i as m,g as c,h as l,x as u,k as d,a as p,f as h}from"../chunks/index.5ae4157e.js";import"../chunks/paths.c506ef62.js";function x(i){let e,a=`<h1 class="mb-2 text-5xl font-bold text-emerald-600">Hey DUDE</h1> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quia, dignissimos ipsum
+		iste corporis aperiam earum nam accusamus dolorem id ex. Architecto, quos. Ad earum cum placeat
+		voluptas vero minus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quia,
+		dignissimos ipsum iste corporis aperiam earum nam accusamus dolorem id ex. Architecto, quos. Ad
+		earum cum placeat voluptas vero minus?</p>`;return{c(){e=c("section"),e.innerHTML=a,this.h()},l(t){e=l(t,"SECTION",{class:!0,"data-svelte-h":!0}),u(e)!=="svelte-8lh9pl"&&(e.innerHTML=a),this.h()},h(){d(e,"class","rounded-xl border border-[#2c2c2c] bg-[#212121] px-4 py-3 text-white shadow shadow-black/25")},m(t,o){p(t,e,o)},p:s,i:s,o:s,d(t){t&&h(e)}}}class _ extends n{constructor(e){super(),m(this,e,null,x,r,{})}}export{_ as component};
