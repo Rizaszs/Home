@@ -1,24 +1,43 @@
 <script lang="ts">
 	import { base } from '$app/paths'
-	import * as config from '$lib/config'
 </script>
 
-<nav class="my-4 flex items-center justify-between text-white">
-	<a href="{base}/">
-		<b>{config.title}</b>
-	</a>
-
-	<ul class="flex gap-2">
+<nav class="navbar">
+	<ul class="navbar-menu">
 		<li>
-			<a href="{base}/showcase">showcase</a>
+			<a href="{base}/" class="navbar-item">
+				<iconify-icon icon="system-uicons:mail-remove" />
+				<p>Home</p>
+			</a>
 		</li>
 		<li>
-			<a href="{base}/blog">blog</a>
+			<a href="{base}/showcase" class="navbar-item"
+				><iconify-icon icon="system-uicons:briefcase" />
+				<p>showcase</p></a
+			>
 		</li>
 		<li>
-			<a href="{base}/about">about</a>
+			<a href="{base}/blog" class="navbar-item">
+				<iconify-icon icon="system-uicons:document-stack" />
+				<p>blog</p></a
+			>
+		</li>
+		<li>
+			<a href="{base}/about" class="navbar-item">
+				<iconify-icon icon="system-uicons:user-male" />
+				<p>about</p></a
+			>
 		</li>
 	</ul>
 
-	<button>contact</button>
+	<div class="navbar-menu">
+		<button class="navbar-toggle">
+			<iconify-icon icon="system-uicons:sun" />
+		</button>
+
+		<button class="button-hire">
+			<iconify-icon icon="system-uicons:check-circle" />
+			<p>hire me</p>
+		</button>
+	</div>
 </nav>

@@ -4,10 +4,10 @@
 	import Footer from '../components/footer.svelte'
 </script>
 
-<div class="layout">
+<div class="page-container">
 	<Header />
 
-	<main class=" flex flex-col lg:flex-row">
+	<main class="">
 		<slot />
 	</main>
 

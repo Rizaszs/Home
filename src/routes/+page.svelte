@@ -1,9 +1,53 @@
 <script>
 	import { base } from '$app/paths'
+	import * as config from '$lib/config'
 	import Lingker from '../../public/lingker.svg?dataurl'
 </script>
 
-<section class=" flex h-fit w-full items-center justify-between py-28">
+<section class="home-section">
+	<div class="hero">
+		<div class="hero-title">
+			<div class="category-section">
+				<div class="category-indicator" />
+				<h1 class="category-title">front end developer</h1>
+			</div>
+			<div class="hero-indicator">
+				<div class="hero-indicator-animate" />
+				<p class="hero-indicator-title">available for work</p>
+			</div>
+		</div>
+		<div class="hero-content">
+			<div
+				class="flex h-40 w-40 flex-col items-center justify-center rounded-full bg-gray-500/40 shadow shadow-white/30"
+			>
+				<img
+					class="h-36 w-36 rounded-full object-contain object-center"
+					src="https://framerusercontent.com/images/dDnqkzQfB3pmvEdrFSxAJSkAyyk.png"
+					alt=""
+					srcset=""
+				/>
+			</div>
+			<h2 class=" text-4xl capitalize"><b>i'm {config.title}</b></h2>
+			<div class=" text-center text-lg text-gray-300">
+				<p>Front end developer from Tangerang, ID.</p>
+				<p>Working freelance at Upwork.</p>
+			</div>
+			<div class="navbar-menu">
+				<button class="button-hire">
+					<iconify-icon icon="system-uicons:moon" />
+					<p>hire me</p>
+				</button>
+
+				<button class="button-hire">
+					<iconify-icon icon="system-uicons:check-circle" />
+					<p>hire me</p>
+				</button>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- <section class=" flex h-fit w-full items-center justify-between py-28">
 	<div class="text-white">
 		<h1 class=" mb-2 text-6xl font-bold">
 			Hi, I'm <span class=" text-blue-700">Suryawan</span>
@@ -56,4 +100,4 @@
 		</div>
 		<div class=" h-36 w-0.5 bg-red-700" />
 	</div>
-</section>
+</section> -->

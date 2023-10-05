@@ -5,13 +5,83 @@
 
 html,
 body {
-	@apply bg-black;
+	@apply bg-[#161616];
 }
 
-.layout {
-	@apply mx-auto grid min-h-screen grid-rows-[auto,1fr,auto] bg-black lg:max-w-[1440px];
+/* BASE */
+.page-container {
+	@apply mx-auto grid min-h-screen grid-rows-[auto,1fr,auto] px-2.5 lg:max-w-[1000px];
+}
+/* BASE */
+
+/* HEADER */
+.navbar {
+	@apply my-2 flex items-center justify-between rounded-xl border border-[#2c2c2c] bg-[#212121] px-4 py-3 text-white shadow shadow-black/25 lg:my-4;
+}
+.navbar-menu {
+	@apply flex items-center justify-center gap-3;
+}
+.navbar-item {
+	@apply flex items-center justify-center gap-2 rounded-full border-[#2c2c2c] bg-[#373737] p-1 capitalize shadow-md shadow-black/20 lg:rounded-md lg:px-4 lg:py-2;
+}
+.navbar-item iconify-icon {
+	@apply text-3xl lg:text-2xl;
+}
+.navbar-item p {
+	@apply hidden lg:block;
+}
+.navbar-toggle {
+	@apply flex items-center justify-center;
+}
+.navbar-toggle iconify-icon {
+	@apply text-2xl;
+}
+.button-hire {
+	@apply flex items-center justify-center gap-2 rounded-md border-[#2c2c2c] bg-[#373737] py-2 pl-2 pr-3 capitalize shadow-md shadow-black/20;
+}
+.button-hire iconify-icon {
+	@apply text-base;
+}
+.button-hire p {
+	@apply text-sm font-semibold lg:text-base;
+}
+/* HEADER */
+
+/* MAIN */
+.home-section {
+	@apply rounded-2xl border border-[#2c2c2c] bg-[#212121] px-2 py-3 text-white shadow shadow-black/25;
+}
+.hero {
+	@apply p-4;
+}
+.hero-title {
+	@apply flex items-center justify-between;
+}
+.hero-title > .hero-indicator {
+	@apply flex items-center justify-center gap-1.5 rounded-full bg-emerald-900/50 p-2 lg:py-1 lg:pl-2 lg:pr-3;
+}
+.hero-title > .hero-indicator > .hero-indicator-animate {
+	@apply h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-500;
+}
+.hero-title > .hero-indicator > .hero-indicator-title {
+	@apply hidden text-xs font-bold uppercase text-emerald-600 lg:block;
+}
+.hero-content {
+	@apply flex flex-col items-center justify-center gap-4 py-12;
 }
 
-.fuck {
-	@apply flex flex-col lg:flex-row;
+.category-section {
+	@apply flex items-center gap-3;
 }
+.category-section > .category-indicator {
+	@apply h-2 w-2 rounded-full bg-gray-500/80;
+}
+.category-section > .category-title {
+	@apply text-xl capitalize text-gray-300;
+}
+
+/* MAIN */
+
+/* FOOTER */
+
+/* FOOTER */
