@@ -1,4 +1,4 @@
-import{s as o,n as i}from"../chunks/scheduler.e108d1fd.js";import{S as a,i as n,g as l,h as c,x as m,k as d,a as p,f as h}from"../chunks/index.5ae4157e.js";function b(r){let e,s=`<h1 class="mb-2 text-5xl font-bold text-rose-600">Welcome to showcase</h1> <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur aliquid ut hic necessitatibus
+import{s as o,n as i}from"../chunks/scheduler.b0c1c2c3.js";import{S as a,i as n,g as l,h as c,x as m,k as d,a as p,f as h}from"../chunks/index.38ee923c.js";function b(r){let e,s=`<h1 class="mb-2 text-5xl font-bold text-rose-600">Welcome to showcase</h1> <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur aliquid ut hic necessitatibus
 		modi. Aspernatur sunt iste harum rerum quos similique libero! Accusantium vel labore dolores
 		modi tenetur quaerat voluptatibus? Lorem ipsum, dolor sit amet consectetur adipisicing elit.
 		Tenetur aliquid ut hic necessitatibus modi. Aspernatur sunt iste harum rerum quos similique

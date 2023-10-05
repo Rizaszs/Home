@@ -1,4 +1,4 @@
-import{s as r,n as s}from"../chunks/scheduler.e108d1fd.js";import{S as n,i as c,g as m,h as l,x as u,k as d,a as p,f as h}from"../chunks/index.5ae4157e.js";function f(i){let e,a=`<h1 class="mb-2 text-5xl font-bold text-emerald-600">Welcome to my fucking blog</h1> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quia, dignissimos ipsum
+import{s as r,n as s}from"../chunks/scheduler.b0c1c2c3.js";import{S as n,i as c,g as m,h as l,x as u,k as d,a as p,f as h}from"../chunks/index.38ee923c.js";function f(i){let e,a=`<h1 class="mb-2 text-5xl font-bold text-emerald-600">Welcome to my fucking blog</h1> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quia, dignissimos ipsum
 		iste corporis aperiam earum nam accusamus dolorem id ex. Architecto, quos. Ad earum cum placeat
 		voluptas vero minus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quia,
 		dignissimos ipsum iste corporis aperiam earum nam accusamus dolorem id ex. Architecto, quos. Ad
