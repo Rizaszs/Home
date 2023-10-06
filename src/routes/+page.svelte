@@ -9,7 +9,7 @@
 		<div class="hero-title">
 			<div class="category-section">
 				<div class="category-indicator" />
-				<h1 class="category-title">front end developer</h1>
+				<h1 class="category-title">Who am I ?</h1>
 			</div>
 			<div class="hero-indicator">
 				<div class="hero-indicator-animate" />
@@ -17,32 +17,88 @@
 			</div>
 		</div>
 		<div class="hero-content">
-			<div
-				class="flex h-40 w-40 flex-col items-center justify-center rounded-full bg-gray-500/40 shadow shadow-white/30"
-			>
+			<div class="hero-container-img">
 				<img
-					class="h-36 w-36 rounded-full object-contain object-center"
 					src="https://framerusercontent.com/images/dDnqkzQfB3pmvEdrFSxAJSkAyyk.png"
-					alt=""
+					alt="avatar hero"
 					srcset=""
 				/>
 			</div>
-			<h2 class=" text-4xl capitalize"><b>i'm {config.title}</b></h2>
-			<div class=" text-center text-lg text-gray-300">
-				<p>Front end developer from Tangerang, ID.</p>
-				<p>Working freelance at Upwork.</p>
+			<div class="hero-container-text">
+				<h2><b>i'm {config.title}</b></h2>
+				<div>
+					<p>Front end developer from Tangerang, ID.</p>
+					<p>Working freelance at Upwork.</p>
+				</div>
+				<div class="navbar-menu mt-3">
+					<a href="https://wa.me/+6285813095235" class="button-contact">
+						<iconify-icon icon="ic:baseline-whatsapp" />
+						<p>contact me</p>
+					</a>
+				</div>
 			</div>
-			<div class="navbar-menu">
-				<button class="button-hire">
-					<iconify-icon icon="system-uicons:moon" />
-					<p>hire me</p>
-				</button>
+		</div>
+	</div>
+	<div class="container-blog">
+		<div class="category-section">
+			<div class="category-indicator" />
+			<h1 class="category-title">recent blog</h1>
+		</div>
+		<div class="container-card">
+			<!-- post -->
+			<div class="card-blog">
+				<div class="">
+					<img
+						class=" h-48 w-full rounded-md object-contain object-center lg:w-48 lg:object-cover"
+						src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStnm25SJSy8yQWHqH3Shwy15rn126QpxbVUA&usqp=CAU"
+						alt=""
+					/>
+				</div>
+				<div class="max-w-lg">
+					<h1 class=" text-2xl font-semibold leading-relaxed">Ronaldo adalah Pemain terbaik</h1>
+					<p class=" text-gray-300">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi autem veniam ex
+						possimus quis laudantium explicabo totam fugit praesentium. Voluptatum minus ea cum!
+						Ducimus optio dolores ut dignissimos ea eaque.
+					</p>
+				</div>
+			</div>
+			<div class="card-blog">
+				<div class="">
+					<img
+						class=" h-48 w-full rounded-md object-contain object-center lg:w-48 lg:object-cover"
+						src="https://static.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/p2/01/2023/09/08/messi8JPG-1847576738.jpg"
+						alt=""
+					/>
+				</div>
+				<div class="max-w-lg">
+					<h1 class=" text-2xl font-semibold leading-relaxed">Messi adalah asist terbaik</h1>
+					<p class=" text-gray-300">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi autem veniam ex
+						possimus quis laudantium explicabo totam fugit praesentium. Voluptatum minus ea cum!
+						Ducimus optio dolores ut dignissimos ea eaque.
+					</p>
+				</div>
+			</div>
 
-				<button class="button-hire">
-					<iconify-icon icon="system-uicons:check-circle" />
-					<p>hire me</p>
-				</button>
+			<div class="card-blog">
+				<div class="">
+					<img
+						class=" h-48 w-full rounded-md object-contain object-center lg:w-48 lg:object-cover"
+						src="https://awsimages.detik.net.id/community/media/visual/2022/05/25/neymar.jpeg?w=650&q=80"
+						alt=""
+					/>
+				</div>
+				<div class="max-w-lg">
+					<h1 class=" text-2xl font-semibold leading-relaxed">Neymar adalah dribble terbaik</h1>
+					<p class=" text-gray-300">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi autem veniam ex
+						possimus quis laudantium explicabo totam fugit praesentium. Voluptatum minus ea cum!
+						Ducimus optio dolores ut dignissimos ea eaque.
+					</p>
+				</div>
 			</div>
+			<!-- post -->
 		</div>
 	</div>
 </section>

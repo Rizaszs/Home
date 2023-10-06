@@ -20,10 +20,6 @@
 	// Function to combine the base URL with the path
 	const createLink = (path: string) => `${base}${path}`
 
-	// function createLink(path: string): string {
-	// 	return `${base}${path}`
-	// }
-
 	// Get the routeId from the page store
 	let routeId: string | null
 
@@ -36,7 +32,10 @@
 	<ul class="navbar-menu">
 		{#each menuItems as item (item.path)}
 			<li>
-				<a href={createLink(item.path)} class="navbar-item {routeId === item.path ? 'active' : ''}">
+				<a
+					href={createLink(item.path)}
+					class=" {routeId === item.path ? 'navbar-active' : 'navbar-item'} "
+				>
 					<iconify-icon icon={item.icon} />
 					<p>{item.label}</p>
 				</a>
@@ -55,54 +54,3 @@
 		</button>
 	</div>
 </nav>
-
-<!-- <script lang="ts">
-	import { base } from '$app/paths'
-</script>
-
-<nav class="navbar">
-	<ul class="navbar-menu">
-		<li>
-			<a href="{base}/" class="navbar-item">
-				<iconify-icon icon="system-uicons:mail-remove" />
-				<p>Home</p>
-			</a>
-		</li>
-		<li>
-			<a href="{base}/showcase" class="navbar-item"
-				><iconify-icon icon="system-uicons:briefcase" />
-				<p>showcase</p></a
-			>
-		</li>
-		<li>
-			<a href="{base}/blog" class="navbar-item">
-				<iconify-icon icon="system-uicons:document-stack" />
-				<p>blog</p></a
-			>
-		</li>
-		<li>
-			<a href="{base}/about" class="navbar-item">
-				<iconify-icon icon="system-uicons:user-male" />
-				<p>about</p></a
-			>
-		</li>
-	</ul>
-
-	<div class="navbar-menu">
-		<button class="navbar-toggle">
-			<iconify-icon icon="system-uicons:sun" />
-		</button>
-
-		<button class="button-hire">
-			<iconify-icon icon="system-uicons:check-circle" />
-			<p>hire me</p>
-		</button>
-	</div>
-</nav> -->
-
-<style>
-	.active {
-		color: black;
-		background-color: aqua;
-	}
-</style>
