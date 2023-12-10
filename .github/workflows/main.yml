@@ -1,0 +1,30 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches:
+      - master # Ganti dengan nama branch Anda
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14' # Sesuaikan dengan versi Node.js yang Anda gunakan
+
+      - name: Install Dependencies
+        run: npm install # Atau perintah lain jika menggunakan package manager lain
+
+      - name: Build
+        run: npm run build # Jalankan perintah build Anda
+
+      - name: Deploy to GitHub Pages
+        run: |
+          touch build/.nojekyll
+          npx gh-pages -d build -t true
