@@ -2,8 +2,8 @@ name: Build and Deploy to Pages
 
 on:
   push:
-    branches: ["feat/integrate-with-github-cms"]
-    #branches: ["main"]
+    
+    branches: ["main"]
 
   workflow_dispatch:
 
