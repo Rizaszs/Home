@@ -50,18 +50,25 @@
 		</div>
 		<div class="container-card">
 			<!-- github-cms -->
-			{#each nodes as { title, number, slug }}
+			{#each nodes as { title, number, slug, createdAt, avatarUrl, category }}
 				<div class="card-blog">
 					<div class="max-w-lg">
-						<a href="{base}/blog/{slug}-{number}" class=" text-2xl font-semibold leading-relaxed"
-							>{title}</a
-						>
-						<p class=" text-gray-300">
+						<a href="{base}/blog/{slug}-{number}" class="text-2xl font-semibold leading-relaxed">
+							{title}
+						</a>
+						<p class="text-gray-300">
+							<img src={avatarUrl} alt="Avatar" class="inline-block h-8 w-8 rounded-full" />
+							{createdAt}
 							{number}
+							{#if category}
+								<span>{category.emoji}</span>
+								{category.name}
+							{/if}
 						</p>
 					</div>
 				</div>
 			{/each}
+
 			<!-- github-cms -->
 			<!-- post -->
 			<div class="card-blog">

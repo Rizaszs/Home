@@ -1,8 +1,8 @@
 import { VERY_SECRET } from '$env/static/private'
 
 type FetcherResponse = {
-	data?: any // Sesuaikan dengan struktur data yang diharapkan dari respons GraphQL
-	errors?: any[] // Jika respons juga dapat mengandung error
+	data?: any
+	errors?: any[]
 }
 
 const fetcher = async (query: string, variables: any, fetch: any): Promise<any> => {
