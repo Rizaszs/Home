@@ -23,8 +23,8 @@ jobs:
     env:
       VERY_SECRET: ${{ secrets.GITHUB_TOKEN }}
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/configure-pages@v1
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v4
         id: pages
       - uses: actions/setup-node@v4
         with:
@@ -38,7 +38,7 @@ jobs:
       - run: npm ci
       - run: npm run build
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v2
         with:
           path: ./build
 
@@ -49,5 +49,5 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - uses: actions/deploy-pages@v1
+      - uses: actions/deploy-pages@v3
         id: deployment
