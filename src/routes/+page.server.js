@@ -1,25 +1,6 @@
 import fetcher from '../lib/fetcher'
 import slugify from '@sindresorhus/slugify'
 
-function convertEmojiFromText(emojiText) {
-	switch (emojiText) {
-		case ':mega:':
-			return '📣'
-		case ':speech_balloon:':
-			return '💬'
-		case ':bulb:':
-			return '💡'
-		case ':ballot_box:':
-			return '🗳️'
-		case ':pray:':
-			return '🙏'
-		case ':raised_hands:':
-			return '🙌'
-		default:
-			return emojiText
-	}
-}
-
 const query = `{
   repository(name:"zalwan.github.io", owner: "zalwan") {
     discussions(first:100, orderBy: {field: CREATED_AT, direction: DESC}) {
@@ -31,7 +12,7 @@ const query = `{
         number
         createdAt
         category {
-          emoji
+          emojiHTML
           name
         }
       }
@@ -39,7 +20,7 @@ const query = `{
   }
 }`
 
-export async function load({ fetch }) {
+async function load({ fetch }) {
 	try {
 		const {
 			repository: {
@@ -48,24 +29,35 @@ export async function load({ fetch }) {
 		} = await fetcher(query, {}, fetch)
 
 		const updatedNodes = nodes.map(
-			({ author: { avatarUrl }, title, number, createdAt, category }) => ({
-				title,
-				number,
-				createdAt,
-				avatarUrl: avatarUrl || '',
-				slug: slugify(title),
-				category: category
-					? {
-							emoji: convertEmojiFromText(category.emoji),
-							name: category.name
-					  }
-					: null
-			})
+			async ({ author: { avatarUrl }, title, number, createdAt, category }) => {
+				let emojiHTML = category ? category.emojiHTML : ''
+
+				if (emojiHTML && emojiHTML.startsWith('<div>') && emojiHTML.endsWith('</div>')) {
+					emojiHTML = emojiHTML.slice(5, -6)
+				}
+
+				return {
+					title,
+					number,
+					createdAt,
+					avatarUrl: avatarUrl || '',
+					slug: slugify(title),
+					category: category
+						? {
+								emojiHTML,
+								name: category.name
+						  }
+						: null
+				}
+			}
 		)
 
-		return { nodes: updatedNodes }
+		const processedNodes = await Promise.all(updatedNodes)
+		return { nodes: processedNodes }
 	} catch (error) {
 		console.error('Error fetching data:', error)
 		return { nodes: [] }
 	}
 }
+
+export { load }
