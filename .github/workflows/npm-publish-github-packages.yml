@@ -28,7 +28,7 @@ jobs:
         id: pages
       - uses: actions/setup-node@v4
         with:
-          node-version: 16
+          node-version: 20.10.0
           cache: 'npm'
         # env: # Or as an environment variable
         #   MY_FUCKING_SECRET: ${{ secrets.SuperSecret }}
