@@ -1,4 +1,4 @@
-import { MY_FUCKING_SECRET } from '$env/static/private'
+import { GITHUB_TOKEN } from '$env/static/private'
 
 type FetcherResponse = {
 	data?: any // Sesuaikan dengan struktur data yang diharapkan dari respons GraphQL
@@ -10,7 +10,7 @@ const fetcher = async (query: string, variables: any, fetch: any): Promise<any> 
 		const res = await fetch('https://api.github.com/graphql', {
 			method: 'POST',
 			headers: {
-				Authorization: `bearer ${MY_FUCKING_SECRET}`,
+				Authorization: `bearer ${GITHUB_TOKEN}`,
 				'Content-Type': 'application/json'
 			},
 			body: JSON.stringify({ query, variables })
