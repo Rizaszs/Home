@@ -20,10 +20,6 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env: # Or as an environment variable
-      MY_FUCKING_SECRET: ${{ secrets.SuperSecret }}
-      run: echo "My secret value is $MY_FUCKING_SECRET"
-
     steps:
       - uses: actions/checkout@v3
       - uses: actions/configure-pages@v1
@@ -32,6 +28,9 @@ jobs:
         with:
           node-version: 16
           cache: 'npm'
+        env: # Or as an environment variable
+          MY_FUCKING_SECRET: ${{ secrets.SuperSecret }}
+          run: echo "My secret value is $MY_FUCKING_SECRET"
       - run: npm ci
       - run: npm run build
       - name: Upload artifact
