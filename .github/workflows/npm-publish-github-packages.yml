@@ -21,7 +21,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      VERY_SECRET: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v3
       - uses: actions/configure-pages@v1
@@ -34,7 +34,7 @@ jobs:
         #   MY_FUCKING_SECRET: ${{ secrets.SuperSecret }}
         #   run: echo "My secret value is $MY_FUCKING_SECRET"
       - run: |
-          echo "Token GitHub: $GITHUB_TOKEN"
+          echo "Do you know it's very secret wkwkwk: $VERY_SECRET"
       - run: npm ci
       - run: npm run build
       - name: Upload artifact
