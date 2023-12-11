@@ -59,7 +59,7 @@
 						<p class="text-gray-300">
 							<img src={avatarUrl} alt="Avatar" class="inline-block h-8 w-8 rounded-full" />
 							{createdAt}
-							{number}
+							<!-- {number} -->
 							{#if category}
 								<span>{category.emojiHTML}</span>
 								{category.name}

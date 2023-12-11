@@ -28,31 +28,44 @@ async function load({ fetch }) {
 			}
 		} = await fetcher(query, {}, fetch)
 
-		const updatedNodes = nodes.map(
-			async ({ author: { avatarUrl }, title, number, createdAt, category }) => {
-				let emojiHTML = category ? category.emojiHTML : ''
+		const processedNodes = await Promise.all(
+			nodes.map(async ({ author: { avatarUrl }, title, number, createdAt, category }) => {
+				let emojiHTML = category?.emojiHTML || ''
 
-				if (emojiHTML && emojiHTML.startsWith('<div>') && emojiHTML.endsWith('</div>')) {
+				if (emojiHTML.startsWith('<div>') && emojiHTML.endsWith('</div>')) {
 					emojiHTML = emojiHTML.slice(5, -6)
 				}
+
+				const date = new Date(createdAt)
+				const monthNames = [
+					'January',
+					'February',
+					'March',
+					'April',
+					'May',
+					'June',
+					'July',
+					'August',
+					'September',
+					'October',
+					'November',
+					'December'
+				]
+				const formattedDate = `${
+					monthNames[date.getMonth()]
+				} ${date.getDate()}, ${date.getFullYear()}`
 
 				return {
 					title,
 					number,
-					createdAt,
+					createdAt: formattedDate,
 					avatarUrl: avatarUrl || '',
 					slug: slugify(title),
-					category: category
-						? {
-								emojiHTML,
-								name: category.name
-						  }
-						: null
+					category: category ? { emojiHTML, name: category.name } : null
 				}
-			}
+			})
 		)
 
-		const processedNodes = await Promise.all(updatedNodes)
 		return { nodes: processedNodes }
 	} catch (error) {
 		console.error('Error fetching data:', error)
