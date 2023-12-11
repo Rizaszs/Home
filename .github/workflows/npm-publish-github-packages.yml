@@ -6,6 +6,7 @@ on:
   #     - feat/integrate-with-github-cms
   discussion:
     types: [created, edited, answered]
+  workflow_dispatch:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
