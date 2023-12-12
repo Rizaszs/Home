@@ -1,7 +1,6 @@
 <script>
 	import { base } from '$app/paths'
 	import * as config from '$lib/config'
-	import Lingker from '../../public/lingker.svg?dataurl'
 
 	export let data
 	$: ({ nodes } = data)
@@ -48,49 +47,50 @@
 			<div class="category-indicator" />
 			<h1 class="category-title">recent blog</h1>
 		</div>
-		<div class="container-card">
+		<div class="container-card flex-col lg:flex-row">
 			<!-- github-cms -->
-			{#each nodes as { title, number, slug, createdAt, avatarUrl, category }}
-				<div class="card-blog">
-					<div class="max-w-lg">
-						<a href="{base}/blog/{slug}-{number}" class="text-2xl font-semibold leading-relaxed">
-							{title}
-						</a>
-						<p class="text-gray-300">
+
+			{#each nodes.slice(0, 3) as { title, number, bodyText, slug, createdAt, category, avatarUrl, resourcePath }}
+				<div class="card-blog flex">
+					<div class="flex max-w-lg flex-col justify-between">
+						<!-- content card -->
+						<div class="flex flex-col">
+							<div class="">
+								<div class="w-fit rounded-full bg-black/30 px-4 py-1">
+									{#if category}
+										<span>{category.emojiHTML}</span>
+										{category.name}
+									{/if}
+								</div>
+								<div class="mb-16 mt-2 flex flex-col">
+									<a href="{base}/blog/{slug}-{number}">
+										<h3 class="line-clamp-2 text-xl font-semibold">
+											{title}
+										</h3>
+									</a>
+									<p class="line-clamp-4">
+										{bodyText}
+									</p>
+								</div>
+							</div>
+						</div>
+						<!-- content card -->
+						<!-- footer card -->
+						<div class="flex items-center justify-start">
 							<img src={avatarUrl} alt="Avatar" class="inline-block h-8 w-8 rounded-full" />
-							{createdAt}
-							<!-- {number} -->
-							{#if category}
-								<span>{category.emojiHTML}</span>
-								{category.name}
-							{/if}
-						</p>
+							<div class="ml-2">
+								<p class="text-sm font-semibold">{resourcePath}</p>
+								<p class="text-sm text-gray-300">
+									{createdAt}
+								</p>
+							</div>
+						</div>
+						<!-- footer card -->
 					</div>
 				</div>
 			{/each}
 
 			<!-- github-cms -->
-			<!-- post -->
-
-			<!-- <div class="card-blog">
-				<div class="">
-					<img
-						class=" h-48 w-full rounded-md object-contain object-center lg:w-48 lg:object-cover"
-						src="https://awsimages.detik.net.id/community/media/visual/2022/05/25/neymar.jpeg?w=650&q=80"
-						alt=""
-					/>
-				</div>
-				<div class="max-w-lg">
-					<h1 class=" text-2xl font-semibold leading-relaxed">Neymar adalah dribble terbaik</h1>
-					<p class=" text-gray-300">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi autem veniam ex
-						possimus quis laudantium explicabo totam fugit praesentium. Voluptatum minus ea cum!
-						Ducimus optio dolores ut dignissimos ea eaque.
-					</p>
-				</div>
-			</div> -->
-
-			<!-- post -->
 		</div>
 	</div>
 </section>
