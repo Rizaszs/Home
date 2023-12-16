@@ -44,9 +44,9 @@
 	</ul>
 
 	<div class="navbar-menu">
-		<button class="navbar-toggle">
+		<!-- <button class="navbar-toggle">
 			<iconify-icon icon="system-uicons:sun" />
-		</button>
+		</button> -->
 
 		<button class="button-hire">
 			<iconify-icon icon="system-uicons:check-circle" />

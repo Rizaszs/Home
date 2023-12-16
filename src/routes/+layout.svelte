@@ -7,15 +7,9 @@
 <div class="page-container">
 	<Header />
 
-	<main class="">
+	<main>
 		<slot />
 	</main>
 
 	<Footer />
 </div>
-
-<!-- <style lang="postcss">
-	.fuck {
-		@apply flex flex-col lg:flex-row;
-	}
-</style> -->

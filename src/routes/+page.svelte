@@ -7,7 +7,7 @@
 	//$: console.log(nodes)
 </script>
 
-<section class="home-section">
+<section class="section-container">
 	<div class="hero">
 		<div class="hero-title">
 			<div class="category-section">

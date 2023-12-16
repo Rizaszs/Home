@@ -6,6 +6,11 @@ const query = `query GetDiscussion($number: Int!){
    discussion(number: $number) {
     bodyHTML
     title
+	author {
+		login
+		avatarUrl
+	}
+	createdAt
   }
 	}
 }`
@@ -22,6 +27,10 @@ export const GET = async ({ params: { number }, fetch, setHeaders }) => {
 		setHeaders({
 			'cache-control': 'max-age=600'
 		})
+
+		const date = new Date(discussion.createdAt)
+		const options = { year: 'numeric', month: 'long', day: 'numeric' }
+		discussion.createdAt = date.toLocaleDateString('en-US', options)
 
 		return json(discussion)
 	} catch (error) {
