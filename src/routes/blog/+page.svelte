@@ -1,34 +1,15 @@
 <script>
 	import { base } from '$app/paths'
-
 	export let data
-	let nodes = []
-	let visibleNodes = []
-
-	// Logika untuk inisialisasi data nodes
 	$: ({ nodes } = data)
-	$: visibleNodes = nodes.slice(0, 6) // Menampilkan 6 card pertama
-
-	const cardsPerPage = 3 // Jumlah card per halaman
-
-	function loadMore() {
-		const currentLength = visibleNodes.length
-		const nextSlice = nodes.slice(currentLength, currentLength + cardsPerPage)
-		visibleNodes = [...visibleNodes, ...nextSlice]
-
-		// Nonaktifkan tombol "Load More" ketika semua data telah dimuat
-		if (visibleNodes.length >= nodes.length) {
-			isAllDataLoaded = true
-		}
-	}
-
-	let isAllDataLoaded = false // Variabel untuk melacak apakah semua data telah dimuat
+	//$: console.log(nodes)
 </script>
 
-<!-- Bagian yang sudah ditampilkan -->
-<section class="section-container">
+<section
+	class="rounded-xl border border-[#2c2c2c] bg-[#212121] px-4 text-white shadow shadow-black/25"
+>
 	<div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-		{#each visibleNodes as { title, number, bodyText, slug, createdAt, category, avatarUrl, resourcePath }}
+		{#each nodes as { title, number, bodyText, slug, createdAt, category, avatarUrl, resourcePath }}
 			<div class="card-blog">
 				<div class="flex max-w-lg flex-col justify-between">
 					<!-- content card -->
@@ -67,20 +48,5 @@
 				</div>
 			</div>
 		{/each}
-	</div>
-	<div class="mt-4 text-center">
-		<button
-			on:click={loadMore}
-			class="rounded px-4 py-2 font-bold text-white
-               {isAllDataLoaded ? 'bg-gray-400' : 'bg-blue-500'}
-               {isAllDataLoaded ? '' : 'hover:bg-blue-700'}"
-			disabled={isAllDataLoaded}
-		>
-			{#if isAllDataLoaded}
-				All Data Loaded
-			{:else}
-				Load More
-			{/if}
-		</button>
 	</div>
 </section>
