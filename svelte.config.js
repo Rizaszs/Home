@@ -7,10 +7,15 @@ const config = {
 		adapter: adapter(),
 		paths: {
 			base: process.env.NODE_ENV === 'production' ? '' : ''
-		}
+		},
+		inlineStyleThreshold: Infinity
 	},
 
-	preprocess: [vitePreprocess({})]
+	preprocess: [
+		vitePreprocess({
+			preserve: ['ld+json']
+		})
+	]
 }
 
 export default config

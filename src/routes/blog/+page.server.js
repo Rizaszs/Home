@@ -1,34 +1,40 @@
+// src/routes/blog/index.json.js
+
 import fetcher from '../../lib/fetcher'
 import slugify from '@sindresorhus/slugify'
 
-const query = `{
-  repository(name:"zalwan.github.io", owner: "zalwan") {
-    discussions(first:100, orderBy: {field: CREATED_AT, direction: DESC}) {
-      nodes {
-        title
-        number
-		bodyText
-        createdAt
-        category {
-          emojiHTML
-          name
-        }
-		author {
-          avatarUrl
-		  resourcePath
-        }
-      }
-    }
-  }
-}`
-
 async function load({ fetch }) {
 	try {
+		const headers = {
+			'Cache-Control': 'max-age=600' // Atur header Cache-Control di sini
+		}
+
+		const query = `{
+            repository(name:"zalwan.github.io", owner: "zalwan") {
+                discussions(first:100, orderBy: {field: CREATED_AT, direction: DESC}) {
+                    nodes {
+                        title
+                        number
+                        bodyText
+                        createdAt
+                        category {
+                            emojiHTML
+                            name
+                        }
+                        author {
+                            avatarUrl
+                            resourcePath
+                        }
+                    }
+                }
+            }
+        }`
+
 		const {
 			repository: {
 				discussions: { nodes }
 			}
-		} = await fetcher(query, {}, fetch)
+		} = await fetcher(query, { headers }, fetch)
 
 		const processedNodes = await Promise.all(
 			nodes.map(
