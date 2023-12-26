@@ -31,7 +31,7 @@
 		<p class="italic text-gray-400">by John wick</p>
 	</div>
 	<div class="footer-social">
-		<div class="category-section">
+		<div class="category-text">
 			<div class="category-indicator" />
 			<h1 class="category-title">follow me</h1>
 		</div>

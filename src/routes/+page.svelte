@@ -10,7 +10,7 @@
 <section class="section-container">
 	<div class="hero">
 		<div class="hero-title">
-			<div class="category-section">
+			<div class="category-text">
 				<div class="category-indicator" />
 				<h1 class="category-title">Who am I ?</h1>
 			</div>
@@ -22,16 +22,16 @@
 		<div class="hero-content">
 			<div class="hero-container-img">
 				<img
-					src="https://framerusercontent.com/images/dDnqkzQfB3pmvEdrFSxAJSkAyyk.png"
+					src="https://media.licdn.com/dms/image/D5603AQEwGYhJhaQe8Q/profile-displayphoto-shrink_200_200/0/1702873275887?e=1709164800&v=beta&t=cbJNIFHtRJEV6ktDWX0StCdsUmijN00eoL3LGV0sgO8"
 					alt="avatar hero"
 					srcset=""
 				/>
 			</div>
 			<div class="hero-container-text">
 				<h2><b>i'm {config.title}</b></h2>
-				<div>
-					<p>Front end developer from Tangerang, ID.</p>
-					<p>Working freelance at Upwork.</p>
+				<div class=" max-w-md">
+					<p>Software engineer from Tangerang, ID.</p>
+					<p>Working at a company in Jakarta and freelance in programming and design.</p>
 				</div>
 				<div class="navbar-menu mt-3">
 					<a href="https://wa.me/+6285813095235" class="button-contact">
@@ -44,8 +44,14 @@
 	</div>
 	<div class="container-blog">
 		<div class="category-section">
-			<div class="category-indicator" />
-			<h1 class="category-title">recent blog</h1>
+			<div class="category-text">
+				<div class="category-indicator" />
+				<h1 class="category-title">recent blog</h1>
+			</div>
+			<a href="{base}/blog" class="button-hire">
+				<p class=" ml-1">View All</p>
+				<iconify-icon icon="system-uicons:arrow-right" />
+			</a>
 		</div>
 		<div class="container-card flex-col lg:flex-row">
 			<!-- github-cms -->

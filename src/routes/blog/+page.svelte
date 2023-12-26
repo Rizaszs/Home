@@ -6,9 +6,7 @@
 	//$: console.log(nodes)
 </script>
 
-<section
-	class="rounded-xl border border-[#2c2c2c] bg-[#212121] px-4 text-white shadow shadow-black/25"
->
+<section class="section-container">
 	<div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
 		{#each nodes as { title, number, bodyText, slug, createdAt, category, avatarUrl, resourcePath }}
 			<div class="card-blog">
